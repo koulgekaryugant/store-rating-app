@@ -31,35 +31,3 @@ Users can submit ratings for stores, and store owners can view ratings for their
 * Bcrypt.js for password hashing
 * dotenv for environment management
 
-------
-
-## 📁 Folder Structure
-
-```
-project-root/
-│
-├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── utils/
-│   ├── prisma/
-│   ├── server.js
-│   ├── package.json
-│   └── .env
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── App.js
-│   │   ├── index.js
-│   │   └── App.css
-│   ├── package.json
-│   └── .env
-│
-└── README.md
