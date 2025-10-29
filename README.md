@@ -63,5 +63,3 @@ project-root/
 │   └── .env
 │
 └── README.md
-```
-| `npm run build` | Build for production      |
