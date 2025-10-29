@@ -113,7 +113,7 @@ const LandingPage = () => {
             <button onClick={() => scrollTo('how-it-works')} className="hover:underline">How It Works</button>
             <button onClick={() => scrollTo('testimonials')} className="hover:underline">Testimonials</button>
           </div>
-          <p>&copy; {new Date().getFullYear()} RateIt. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Verly. All rights reserved.</p>
         </div>
       </footer>
     </>
