@@ -1,0 +1,69 @@
+// backend/prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User Role Enum
+enum Role {
+  SYSTEM_ADMIN
+  NORMAL_USER
+  STORE_OWNER
+}
+
+// User Model
+model User {
+  id        String   @id @default(uuid())
+  name      String   @db.VarChar(60)
+  email     String   @unique
+  password  String
+  address   String   @db.VarChar(400)
+  role      Role     @default(NORMAL_USER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  ownedStore Store?
+  ratings    Rating[]
+
+  @@index([email])
+}
+
+// Store Model
+model Store {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  email     String   @unique
+  address   String   @db.VarChar(400)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  ownerId   String   @unique
+  owner     User     @relation(fields: [ownerId], references: [id])
+
+  ratings   Rating[]
+
+  @@index([name])
+  @@index([address])
+}
+
+// Rating Model (Junction Table)
+model Rating {
+  userId      String
+  storeId     String
+  ratingValue Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user  User  @relation(fields: [userId], references: [id])
+  store Store @relation(fields: [storeId], references: [id])
+
+  // Composite primary key: user can only rate a store once
+  @@id([userId, storeId])
+  @@index([storeId])
+  @@index([userId])
+}
