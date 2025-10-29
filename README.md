@@ -11,81 +11,6 @@ Users can submit ratings for stores, and store owners can view ratings for their
 
 ---
 
-## 👥 User Roles & Functionalities
-
-### 🛠 System Administrator
-
-* Add new **stores**, **normal users**, and **admin users**.
-* Access dashboard displaying:
-
-  * Total number of users
-  * Total number of stores
-  * Total number of submitted ratings
-* Add new users with:
-
-  * Name
-  * Email
-  * Password
-  * Address
-* View a list of all stores including:
-
-  * Name, Email, Address, Rating
-* View list of all users:
-
-  * Name, Email, Address, Role
-* Apply filters on all listings by **Name**, **Email**, **Address**, or **Role**.
-* View details of all users (if the user is a Store Owner, their Rating is displayed).
-* Log out from the system.
-
----
-
-### 👤 Normal User
-
-* Can sign up and log in to the platform.
-* **Signup Form Fields:**
-
-  * Name
-  * Email
-  * Address
-  * Password
-* Update their password after login.
-* View a list of all registered stores.
-* Search for stores by **Name** and **Address**.
-* Store listings display:
-
-  * Store Name
-  * Address
-  * Overall Rating
-  * User’s Submitted Rating
-  * Option to **submit** or **update** rating
-* Submit ratings between **1 to 5** for individual stores.
-* Log out from the system.
-
----
-
-### 🏪 Store Owner
-
-* Can log in to the platform.
-* Can update their password after login.
-* Dashboard functionalities:
-
-  * View list of users who have rated their store.
-  * View average rating of their store.
-* Can log out from the system.
-
----
-
-## ✅ Form Validations
-
-| Field        | Rules                                                                                         |
-| ------------ | --------------------------------------------------------------------------------------------- |
-| **Name**     | Minimum **3 characters**, Maximum **60 characters**                                           |
-| **Address**  | Maximum **400 characters**                                                                    |
-| **Password** | 8–16 characters, must contain **at least one uppercase letter** and **one special character** |
-| **Email**    | Must follow standard email format validation                                                  |
-
----
-
 ## 💻 Tech Stack
 
 ### Frontend
@@ -139,25 +64,4 @@ project-root/
 │
 └── README.md
 ```
-
----
-
-## 🧾 Scripts
-
-### Backend
-
-| Command                      | Description                      |
-| ---------------------------- | -------------------------------- |
-| `npm start`                  | Start the backend server         |
-| `npx prisma migrate dev`     | Run Prisma migrations            |
-| `npx prisma migrate deploy`  | Apply migrations to live DB      |
-| `npx ts-node prisma/seed.ts` | Seed database with default users |
-| `npx prisma studio`          | Open Prisma GUI                  |
-
-### Frontend
-
-| Command         | Description               |
-| --------------- | ------------------------- |
-| `npm start`     | Start the frontend (CRA)  |
-| `npm run dev`   | Start the frontend (Vite) |
 | `npm run build` | Build for production      |
