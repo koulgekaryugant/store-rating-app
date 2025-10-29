@@ -1,4 +1,4 @@
-# ⭐ Store Rating and Management System - (RateIt ⭐)
+# ⭐ Store Rating and Management System - (Verly)
 
 A full-stack web application that allows users to register, log in, and submit ratings for stores registered on the platform. The system supports multiple user roles — **System Administrator**, **Normal User**, and **Store Owner** — each with different access permissions and dashboards.
 
