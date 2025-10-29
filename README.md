@@ -1,29 +1,8 @@
-# ⭐ Store Rating and Management System - (Verly)
+#  Store Rating and Management System - (Verly)
 
 A full-stack web application that allows users to register, log in, and submit ratings for stores registered on the platform. The system supports multiple user roles — **System Administrator**, **Normal User**, and **Store Owner** — each with different access permissions and dashboards.
 
----
-
-## 📘 Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [User Roles & Functionalities](#user-roles--functionalities)
-
-   * [System Administrator](#system-administrator)
-   * [Normal User](#normal-user)
-   * [Store Owner](#store-owner)
-3. [Form Validations](#form-validations)
-4. [Tech Stack](#tech-stack)
-5. [Project Setup](#project-setup)
-
-   * [Backend Setup](#backend-setup)
-   * [Frontend Setup](#frontend-setup)
-6. [Environment Variables](#environment-variables)
-7. [Folder Structure](#folder-structure)
-8. [Scripts](#scripts)
-9. [Deployment](#deployment)
-
----
+------
 
 ## 🧩 Project Overview
 
@@ -127,86 +106,7 @@ Users can submit ratings for stores, and store owners can view ratings for their
 * Bcrypt.js for password hashing
 * dotenv for environment management
 
----
-
-## ⚙️ Project Setup
-
-### 🔹 Backend Setup
-
-1. Navigate to the backend directory:
-
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file:
-
-   ```env
-   DATABASE_URL=postgresql://storeratedb_user:YOUR_PASSWORD@dpg-d3mhe2ogjchc73d5atjg-a.oregon-postgres.render.com/storeratedb
-   JWT_SECRET=your_jwt_secret_key
-   PORT=5000
-   ```
-4. Run Prisma migrations:
-
-   ```bash
-   npx prisma migrate deploy
-   ```
-5. Seed the database with default users (System Admin, Store Owner, Normal User):
-
-   ```bash
-   npx ts-node prisma/seed.ts
-   ```
-6. Start the backend server:
-
-   ```bash
-   npm start
-   ```
-
-   The backend will run at **[https://store-rating-app-3-1umv.onrender.com](https://store-rating-app-3-1umv.onrender.com)**
-
----
-
-### 🔹 Frontend Setup
-
-1. Navigate to the frontend directory:
-
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file:
-
-   ```env
-   REACT_APP_API_URL=https://store-rating-app-3-1umv.onrender.com/api
-   ```
-4. Start the frontend server:
-
-   ```bash
-   npm start
-   ```
-
-   The frontend will run at **[https://store-rating-app-green.vercel.app](https://store-rating-app-green.vercel.app)**
-
----
-
-## 🌍 Environment Variables
-
-| Variable            | Description                           |
-| ------------------- | ------------------------------------- |
-| `DATABASE_URL`      | Database connection string for Prisma |
-| `JWT_SECRET`        | Secret key for JWT token signing      |
-| `PORT`              | Backend server port                   |
-| `REACT_APP_API_URL` | Base URL for backend API              |
-
----
+------
 
 ## 📁 Folder Structure
 
