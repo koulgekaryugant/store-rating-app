@@ -261,19 +261,3 @@ project-root/
 | `npm start`     | Start the frontend (CRA)  |
 | `npm run dev`   | Start the frontend (Vite) |
 | `npm run build` | Build for production      |
-
----
-
-## 🚀 Deployment
-
-* **Frontend**: [https://store-rating-app-green.vercel.app](https://store-rating-app-green.vercel.app)
-* **Backend**: [https://store-rating-app-3-1umv.onrender.com](https://store-rating-app-3-1umv.onrender.com)
-* **GitHub Repository**: [https://github.com/Saichandanyadav/store-rating-app](https://github.com/Saichandanyadav/store-rating-app)
-
----
-
-## 👨‍💻 Author
-
-**Sai Chandan Yadav**
-Full Stack Developer | Coder
-🔗 [LinkedIn](https://www.linkedin.com/in/saichandanyadav/)
